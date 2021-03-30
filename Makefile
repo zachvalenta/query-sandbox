@@ -17,7 +17,7 @@ gen:
 	poetry run vd $(f) -b -o $(dir $(f))$(notdir $(basename $(f))).db
 
 cli:
-	poetry run litecli $(f)
+	poetry run litecli --liteclirc litecli.conf $(f)
 
 vd:
 	poetry run vd $(f)
