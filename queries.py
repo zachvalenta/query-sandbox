@@ -1,16 +1,36 @@
 import sqlite3
 
-from pypika import Query, Table, Field
+from pypika import Field, Query, Table, functions as fn
 
-# connection
-conn = sqlite3.connect('./data/executions.db')
+###
+# CONNECTION
+###
+
+conn = sqlite3.connect("./data/executions.db")
 c = conn.cursor()
 
-# query
-q = Query.from_('executions').select('height')
-print(q)
+###
+# TABLES
+###
 
-# run query and exit
-c.execute(q.get_sql())  # sqlite3 only deals w/ strings as queries
+ex = Table("executions")
+
+###
+# QUERIES
+###
+
+# basic
+basic = Query.from_("executions").select("height")
+
+# percentage of prisoners w/ no value for height
+no_height = Query.from_(ex).select(fn.Count("height")).where(ex.height == "")
+all_ex = Query.from_(ex).select(fn.Count("height"))
+q = f"select ({no_height.get_sql()}) * 100 / ({all_ex.get_sql()})"
+
+###
+# RUN QUERY AND EXIT
+###
+
+c.execute(q)  # sqlite3 only deals w/ strings as queries
 print(c.fetchall())
 c.close()
