@@ -40,10 +40,10 @@ verbs:
 #
 
 lite:
-	poetry run litecli --liteclirc litecli.conf $(f)
+	poetry run litecli --liteclirc litecli.conf $(f).db
 
 vd:
-	poetry run vd $(f)
+	poetry run vd $(f).db
 
 pika:
 	poetry run python queries.py
