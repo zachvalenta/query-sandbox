@@ -2,6 +2,8 @@
 
 This is a sandbox for practicing SQL queries.
 
+add this https://hackernews-insight.vercel.app/user-analysis
+
 Here's the data:
 ```sh
 ├── data
@@ -15,6 +17,7 @@ Here's the data:
 │   └──── song.csv
 │   └──── year.csv
 │   └── shootings.csv   # https://catalog.data.gov/dataset/nypd-shooting-incident-data-historic
+│   └── tfr.csv         # https://www.cia.gov/the-world-factbook/field/total-fertility-rate/country-comparison
 │   └── verbos.sql      # https://github.com/ghidinelli/fred-jehle-spanish-verbs
 ```
 

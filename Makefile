@@ -4,14 +4,14 @@ help:
 	@echo
 	@echo "CREATE DB"
 	@echo
-	@echo "gen:        generate SQLite db from csv (make gen f=data/<file>)"
+	@echo "gen:        generate SQLite db from csv (make gen f=data/FILENAME_SANS_EXTENSION)"
 	@echo "deals:      generate deals db"
 	@echo "verbs:      generate verbs db"
 	@echo
 	@echo "ACCESS DB"
 	@echo
-	@echo "lite:       open db file using litecli (make lite f=data/<file>)"
-	@echo "vd:         open db file using visidata (make vd f=data/<file>)"
+	@echo "lite:       open db file using litecli (make lite f=data/FILE)"
+	@echo "vd:         open db file using visidata (make vd f=data/FILE)"
 	@echo "pika:       run PyPika-generated queries with sqlite3"
 	@echo
 	@echo "DEPS"
@@ -40,10 +40,10 @@ verbs:
 #
 
 lite:
-	poetry run litecli --liteclirc litecli.conf $(f).db
+	poetry run litecli --liteclirc litecli.conf $(f)
 
 vd:
-	poetry run vd $(f).db
+	poetry run vd $(f)
 
 pika:
 	poetry run python queries.py
