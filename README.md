@@ -1,5 +1,11 @@
 # query sandbox
 
+* Polars seed data in dotfiles and read by python startup
+* where to store your data (email? google drive? repo/csvbase? ⭐️ hugging face? metadata mgmt?)
+* canonical datasets
+
+---
+
 This is a sandbox for practicing SQL queries.
 
 add this https://hackernews-insight.vercel.app/user-analysis
