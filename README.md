@@ -1,8 +1,11 @@
-# query sandbox
+# approaches
 
+* this repo 📍 fix CSV-SQL conversion (DuckDB? SQLite?)
 * Polars seed data in dotfiles and read by python startup
-* where to store your data (email? google drive? repo/csvbase? ⭐️ hugging face? metadata mgmt?)
-* canonical datasets
+* Polars read from Hugging Face https://docs.pola.rs/user-guide/io/hugging-face/ https://pola.rs/posts/polars-hugging-face/
+* storage limits: Github, csvbase
+
+# query sandbox
 
 ---
 
