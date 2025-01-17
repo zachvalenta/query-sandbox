@@ -1,11 +1,62 @@
-# approaches
+# CAPP-AIR
+
+## python startup
+
+```python
+import polars as pl
+dot_path = Path(os.path.expandvars('$HOME/Documents/denv/dotfiles/data/eda'))
+foo = pl.read_csv(f'{dot_path}/foo.csv')
+bar = pl.read_csv(f'{dot_path}/bar.csv')
+```
+
+## version control data
+
+```sh
+# dotfiles
+├── data
+│   └── ed
+│   └──── bar.csv
+│   └──── foo.csv
+```
+
+* `foo.csv`
+```csv
+id,mpn,mfg,price
+1,6WFR,samsung,408
+2,SLWM,samsung,488
+3,PAY4,lg,260
+4,5K6O,motorola,223
+5,EXKJ,motorola,153
+6,7JNT,apple,481
+7,VY1Z,google,523
+8,NYK3,samsung,256
+9,DTVH,sony,433
+10,7S3J,oneplus,274
+```
+
+* `bar.csv`
+```csv
+id,mfg,price
+6WFR,samsung,372
+SLWM,samsung,488
+PAY4,lg,236
+5K6O,motorola,223
+EXKJ,motorola,134
+7JNT,apple,481
+VY1Z,google,475
+NYK3,samsung,256
+DTVH,sony,433
+7S3J,oneplus,263
+```
+
+# APPROACHES
 
 * this repo 📍 fix CSV-SQL conversion (DuckDB? SQLite?)
 * Polars seed data in dotfiles and read by python startup
 * Polars read from Hugging Face https://docs.pola.rs/user-guide/io/hugging-face/ https://pola.rs/posts/polars-hugging-face/
 * storage limits: Github, csvbase
 
-# query sandbox
+# PREVIOUS README
 
 ---
 
